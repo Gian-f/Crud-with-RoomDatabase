@@ -19,7 +19,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
-            android:clickable="false"
             app:navigationIcon="@drawable/ic_home">
 
             <TextView
@@ -27,6 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
+                android:inputType="none"
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
                 android:text="Registros" />
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="@color/white"
         android:src="@drawable/ic_baseline_more"
         android:tint="@color/black"

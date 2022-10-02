@@ -28,7 +28,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:text="Cadastro" />
+                android:text="Cadastrar" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -53,11 +53,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
-                android:layout_marginBottom="8dp"
-                android:text="Palavra"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:text="Nome"
                 android:textColor="@color/black"
                 app:layout_constraintBottom_toTopOf="@+id/edtWord"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/edtWord"
@@ -65,7 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:background="@drawable/bg_edit_text"
-                android:hint="Insira a palavra..."
+                android:hint="Insira um nome..."
                 android:padding="14dp"
                 android:inputType="textAutoComplete"
                 android:textSize="14sp"

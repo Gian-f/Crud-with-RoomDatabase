@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import com.example.roomdatabasemvvm.R
 import com.example.roomdatabasemvvm.databinding.ActivityNewWordBinding
 
@@ -35,6 +36,7 @@ class NewWordActivity : AppCompatActivity() {
                 var word = this.binding.edtWord.text.toString()
                 replyIntent.putExtra("REPLY", word)
                 setResult(Activity.RESULT_OK, replyIntent)
+                this.binding.progressBar.visibility = View.VISIBLE
             }
             finish()
         }
