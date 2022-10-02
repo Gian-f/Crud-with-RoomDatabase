@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/main_drawable"
+        android:end="-5dp"
+        android:start="-5dp"
+        android:top="-5dp">
+        <shape android:shape="rectangle">
+            <corners android:bottomLeftRadius="5dp"
+                android:bottomRightRadius="5dp"/>
+            <stroke
+                android:width="4dp"
+                android:color="@color/black" />
+        </shape>
+    </item>
+</layer-list>
