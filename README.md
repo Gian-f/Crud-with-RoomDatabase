@@ -1,5 +1,5 @@
 # Crud-with-RoomDatabase
-Aplicação android nativa com Room Database.
+Aplicação CRUD android nativa com Room Database.
 
 ## Tecnologias utilizadas nesse projeto:
 
