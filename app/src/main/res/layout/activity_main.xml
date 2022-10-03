@@ -53,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/black"
         android:src="@drawable/ic_baseline_more"
         android:tint="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/recyclerview"

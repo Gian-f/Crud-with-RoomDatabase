@@ -75,13 +75,12 @@
             android:id="@+id/btnCriarConta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:radius="15dp"
-            android:text="@string/entry"
-            android:textColor="@color/black"
-            app:backgroundTint="@null"
             android:layout_marginTop="16dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/entry"
             android:textAllCaps="false"
-            android:background="@color/white" />
+            android:textColor="@color/black"
+            app:backgroundTint="@null" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"

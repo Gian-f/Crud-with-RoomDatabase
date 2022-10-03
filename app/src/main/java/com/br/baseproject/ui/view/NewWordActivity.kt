@@ -32,7 +32,7 @@ class NewWordActivity : AppCompatActivity() {
             if (TextUtils.isEmpty(this.binding.edtWord.text)) {
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
-                var word = this.binding.edtWord.text.toString()
+                val word = this.binding.edtWord.text.toString()
                 replyIntent.putExtra("REPLY", word)
                 setResult(Activity.RESULT_OK, replyIntent)
                 this.binding.progressBar.visibility = View.VISIBLE

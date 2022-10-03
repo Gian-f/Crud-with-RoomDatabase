@@ -4,7 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/bg_bottom_sheet.xml" value="0.3215" />
-        <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/bg_button.xml" value="0.3215" />
+        <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/bg_button.xml" value="0.25" />
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/bg_edit_text.xml" value="0.3215" />
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/bottom_card.xml" value="0.3085" />
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/drawable/ic_baseline_more.xml" value="0.3085" />
@@ -18,11 +18,6 @@
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/layout/activity_splash.xml" value="0.3729166666666667" />
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/layout/bottom_sheet.xml" value="0.3859375" />
         <entry key="..\:/Users/gianf/AndroidStudioProjects/RoomDatabaseMVVM/app/src/main/res/layout/recycler_item.xml" value="0.33" />
-        <entry key="app/src/main/res/drawable/bottom_card.xml" value="0.1985" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.22" />
-        <entry key="app/src/main/res/layout/activity_recover_account.xml" value="0.29936594202898553" />
-        <entry key="app/src/main/res/layout/activity_register.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/recycler_item.xml" value="0.30842391304347827" />
       </map>
     </option>
   </component>

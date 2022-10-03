@@ -12,20 +12,20 @@ import kotlinx.coroutines.launch
 
 @Database(entities = [Word::class], version = 1, exportSchema = false)
 
-public abstract class WordRoomDatabase : RoomDatabase() {
+public abstract class AppRoomDatabase : RoomDatabase() {
 
     abstract fun wordDao(): WordDao
 
     companion object {
 
         @Volatile
-        private var INSTANCE: WordRoomDatabase? = null
+        private var INSTANCE: AppRoomDatabase? = null
 
-        fun getDatabase(scope : CoroutineScope, context: Context): WordRoomDatabase {
+        fun getDatabase(scope : CoroutineScope, context: Context): AppRoomDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
-                    WordRoomDatabase::class.java,
+                    AppRoomDatabase::class.java,
                     "word_database")
                     .addCallback(WordDatabaseCallback(scope))
                     .build()
