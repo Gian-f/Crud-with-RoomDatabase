@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">RoomDatabaseMVVM</string>
+    <string name="app_name">BaseProject</string>
+    <string name="text_button_bottom_sheet">OK</string>
+    <string name="text_title_bottom_sheet">Atenção!</string>
+    <string name="forgotPassword">Esqueceu a senha?</string>
+    <string name="register">Cadastre-se</string>
+    <string name="entry">Entrar</string>
+    <string name="digitPassword">Digite sua senha aqui…</string>
+    <string name="digitUsername">Digite seu usuário aqui…</string>
+    <string name="password">Senha</string>
+    <string name="logo">logo</string>
+    <string name="Username">E-mail</string>
+    <string name="error_not_impl_yet">Recurso ainda não implementado!</string>
+    <string name="text_register_account">Crie sua conta</string>
+    <string name="text_recover_login">Esqueceu a senha?</string>
+    <string name="text_password_empty_login">Informe sua senha.</string>
+    <string name="text_email_empty_login">Informe seu e-mail.</string>
+
+    <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
+
+    <!--    Erros Firebase Authentication-->
+    <string name="account_not_registered_register">Nenhuma conta encontrada com este e-mail.</string>
+    <string name="invalid_email_register">Insira um e-mail válido.</string>
+    <string name="invalid_password_register">Senha inválida, tente novamente.</string>
+    <string name="email_in_use_register">Este e-mail já está em uso.</string>
+    <string name="strong_password_register">Insira uma senha mais forte.</string>
+    <string name="text_btn_recover_account">Recuperar Acesso</string>
+
 </resources>

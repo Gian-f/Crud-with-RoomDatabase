@@ -1,31 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.roomdatabasemvvm" >
+    package="com.br.baseproject" >
 
     <application
-        android:name=".application.WordApplication"
+        android:name="com.br.baseproject.application.WordApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomDatabaseMVVM"
-        tools:targetApi="31">
+        tools:targetApi="32" >
         <activity
-            android:name=".ui.view.NewWordActivity"
-            android:exported="false"
-            android:parentActivityName=".ui.view.MainActivity"/>
-        <activity
-            android:name=".ui.view.MainActivity"
-            android:exported="true">
+            android:name="com.br.baseproject.ui.view.SplashActivity"
+            android:exported="true"
+            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.br.baseproject.ui.view.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.br.baseproject.ui.view.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.br.baseproject.ui.view.auth.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity" />
+        <activity
+            android:name="com.br.baseproject.ui.view.auth.RecoverAccountActivity"
+            android:exported="false"
+            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity" />
+        <activity
+            android:name="com.br.baseproject.ui.view.NewWordActivity"
+            android:exported="false"
+            android:parentActivityName="com.br.baseproject.ui.view.MainActivity" />
+        <activity
+            android:name="com.br.baseproject.ui.view.MainActivity"
+            android:exported="false"
+            android:parentActivityName="com.br.baseproject.ui.view.DashboardActivity" />
     </application>
 
 </manifest>
