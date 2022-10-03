@@ -74,7 +74,6 @@ class DashboardActivity : AppCompatActivity() {
         }
     }
 
-
     private fun changeStatusBar() {
         window.statusBarColor = getColor(R.color.black)
     }

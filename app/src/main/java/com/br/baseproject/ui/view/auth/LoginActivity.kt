@@ -21,6 +21,7 @@ class LoginActivity : AppCompatActivity() {
         binding=ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         initClicks()
+        changeStatusBar()
     }
 
     private fun initClicks() {
@@ -39,18 +40,13 @@ class LoginActivity : AppCompatActivity() {
         val password=binding.editSenha.text.toString().trim()
         if (email.isNotEmpty()) {
             if (password.isNotEmpty()) {
-                binding.progressBar.isVisible=true
+                binding.progressBar.isVisible = true
                 loginUser(email, password)
-
             } else {
-                showBottomSheet(
-                    message=R.string.text_password_empty_login
-                )
+                showBottomSheet(message = R.string.text_password_empty_login)
             }
         } else {
-            showBottomSheet(
-                message=R.string.text_email_empty_login
-            )
+            showBottomSheet(message = R.string.text_email_empty_login)
         }
     }
 
@@ -60,11 +56,13 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     startActivity(Intent(this, DashboardActivity::class.java))
                 } else {
-                    showBottomSheet(
-                        message=FirebaseHelper.validError(task.exception?.message ?: "")
-                    )
-                    binding.progressBar.isVisible=false
+                    showBottomSheet(message = FirebaseHelper.validError(task.exception?.message ?: ""))
+                    binding.progressBar.isVisible = false
                 }
             }
         }
+
+    private fun changeStatusBar() {
+        window.statusBarColor = getColor(R.color.black)
+    }
 }

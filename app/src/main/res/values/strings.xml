@@ -16,6 +16,15 @@
     <string name="text_password_empty_login">Informe sua senha.</string>
     <string name="text_email_empty_login">Informe seu e-mail.</string>
 
+    <!--    Register Fragment-->
+    <string name="text_password_empty_register">Informe sua senha.</string>
+    <string name="text_email_empty_register">Informe seu e-mail.</string>
+
+    <!--    Recover Account Fragment-->
+    <string name="text_toolbar_recover_account">Recuperar conta</string>
+    <string name="text_email_empty_recover_account">Informe seu e-mail.</string>
+    <string name="text_email_send_sucess_recover_account">Pronto, acabamos de enviar um link para seu e-mail.</string>
+
     <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
 
     <!--    Erros Firebase Authentication-->
