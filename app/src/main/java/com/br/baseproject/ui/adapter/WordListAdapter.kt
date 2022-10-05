@@ -30,8 +30,7 @@ class WordListAdapter : ListAdapter<Word, WordListAdapter.WordViewHolder>(WordsC
 
         companion object {
             fun create(parent: ViewGroup): WordViewHolder {
-                val view: View= LayoutInflater.from(parent.context)
-                    .inflate(R.layout.recycler_item, parent, false)
+                val view: View= LayoutInflater.from(parent.context).inflate(R.layout.adapter_item, parent, false)
                 return WordViewHolder(view)
             }
         }

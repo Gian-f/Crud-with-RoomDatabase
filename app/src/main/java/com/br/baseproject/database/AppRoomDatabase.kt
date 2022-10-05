@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 
 @Database(entities = [Word::class], version = 1, exportSchema = false)
 
-public abstract class AppRoomDatabase : RoomDatabase() {
+abstract class AppRoomDatabase : RoomDatabase() {
 
     abstract fun wordDao(): WordDao
 

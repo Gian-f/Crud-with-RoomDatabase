@@ -26,6 +26,7 @@
     <string name="text_email_send_sucess_recover_account">Pronto, acabamos de enviar um link para seu e-mail.</string>
 
     <string name="error_generic">Ocorreu um erro, por favor tente novamente mais tarde.</string>
+    <string name="error_empty_fields">Existem um ou mais campos vazios. Por favor, preencha-os.</string>
 
     <!--    Erros Firebase Authentication-->
     <string name="account_not_registered_register">Nenhuma conta encontrada com este e-mail.</string>

@@ -3,7 +3,7 @@
     <style name="Theme.RoomDatabaseMVVM" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/card_blue</item>
+        <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/card_blue</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/card_blue</item>

@@ -8,6 +8,8 @@ import com.br.baseproject.databinding.ActivityRecoverAccountBinding
 import com.br.baseproject.helper.FirebaseHelper
 import com.br.baseproject.helper.showBottomSheet
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class RecoverAccountActivity : AppCompatActivity() {
     private var binding: ActivityRecoverAccountBinding? = null
@@ -17,7 +19,9 @@ class RecoverAccountActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         this.binding = ActivityRecoverAccountBinding.inflate(layoutInflater)
         setContentView(this.binding!!.root)
+        auth = Firebase.auth
         initClicks()
+        iniciaToolbar()
     }
 
     private fun initClicks() {
@@ -49,4 +53,10 @@ class RecoverAccountActivity : AppCompatActivity() {
                 binding?.progressBar?.isVisible = false
             }
         }
+
+    private fun iniciaToolbar() {
+        val toolbar = binding?.toolbar
+        toolbar?.title = ""
+        setSupportActionBar(toolbar)
+    }
 }

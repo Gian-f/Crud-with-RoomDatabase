@@ -7,15 +7,20 @@ import android.os.Bundle
 import com.br.baseproject.R
 import com.br.baseproject.helper.showBottomSheet
 import com.br.baseproject.ui.view.auth.LoginActivity
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class DashboardActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityDashboardBinding
+    private lateinit var auth : FirebaseAuth
 
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        auth = Firebase.auth
         navigateForm()
         navigateHome()
         navigatePerfil()
@@ -27,10 +32,10 @@ class DashboardActivity : AppCompatActivity() {
     }
 
     private fun iniciaDados() {
-        val intent = intent.extras
-        if(intent != null) {
-            val username = intent.getString("username")
-            setUserName(username!!)
+        val username = auth.currentUser?.email
+        println(username)
+        if(username != null) {
+            setUserName(username)
         }
     }
 
@@ -52,6 +57,7 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun deslogar() {
         binding.ibLogout.setOnClickListener {
+            auth.signOut()
             finish()
             startActivity(Intent(this, LoginActivity::class.java))
         }
