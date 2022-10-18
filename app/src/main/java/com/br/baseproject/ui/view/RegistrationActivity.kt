@@ -4,8 +4,11 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.core.view.isEmpty
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -30,7 +33,6 @@ class MainActivity : AppCompatActivity() {
         this.binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(this.binding.root)
         iniciaToolbar()
-
         this.recyclerview = this.binding.recyclerview
         this.adapter = WordListAdapter()
         this.recyclerview.adapter = this.adapter
@@ -49,7 +51,6 @@ class MainActivity : AppCompatActivity() {
             resultLauncher.launch(Intent(this, NewWordActivity::class.java))
         }
     }
-
     private fun iniciaToolbar() {
         val toolbar = binding.toolbar
         toolbar.title = ""

@@ -1,16 +1,16 @@
 package com.br.baseproject.ui.viewmodel
 
 import androidx.lifecycle.*
-import com.br.baseproject.database.model.Word
+import com.br.baseproject.database.model.Registry
 import com.br.baseproject.repository.WordRepository
 import kotlinx.coroutines.launch
 
 class WordViewModel(private val repository: WordRepository): ViewModel() {
 
-    val allWords: LiveData<List<Word>> = repository.allWords.asLiveData()
+    val allWords: LiveData<List<Registry>> = repository.allWords.asLiveData()
 
-    fun insert(word: Word)=viewModelScope.launch {
-        repository.insert(word)
+    fun insert(registry: Registry)=viewModelScope.launch {
+        repository.insert(registry)
     }
 
     class WordViewModelFactory(private val repository: WordRepository) : ViewModelProvider.Factory {
