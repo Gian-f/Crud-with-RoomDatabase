@@ -174,7 +174,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/settings"
+            android:id="@+id/chats"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -197,12 +197,13 @@
                     android:contentDescription="Sair"
                     android:minWidth="50dp"
                     android:minHeight="50dp"
-                    android:src="@drawable/ic_baseline_settings_24" />
+                    android:src="@drawable/ic_baseline_chat_24"
+                    app:tint="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Configurações"
+                    android:text="Conversas"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />
@@ -251,7 +252,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/info"
+            android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="3"
@@ -274,13 +275,13 @@
                     android:contentDescription="home"
                     android:minWidth="50dp"
                     android:minHeight="50dp"
-                    android:src="@drawable/ic_baseline_info_24"
+                    android:src="@drawable/ic_baseline_settings_24"
                     app:tint="@color/black" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Informações"
+                    android:text="Configurações"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textStyle="bold" />

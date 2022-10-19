@@ -1,17 +1,26 @@
 package com.br.baseproject.repository
 
 import androidx.annotation.WorkerThread
-import com.br.baseproject.database.dao.WordDao
-import com.br.baseproject.database.model.Word
+import com.br.baseproject.database.dao.RegistryDao
+import com.br.baseproject.database.model.Registry
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 
-class WordRepository(private val wordDao: WordDao) {
+class WordRepository(private val registryDao: RegistryDao) {
 
-    val allWords: Flow<List<Word>> = wordDao.getAlphabetizedWords()
+    val allWords: Flow<List<Registry>> = registryDao.getAlphabetizedWords()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
-    suspend fun insert(word: Word){
-        wordDao.insert(word)
+    suspend fun insert(registry: Registry){
+        registryDao.insert(registry)
+    }
+
+     fun findAll(){
+         CoroutineScope(Dispatchers.IO).launch {
+             registryDao.getAllWords()
+         }
     }
 }

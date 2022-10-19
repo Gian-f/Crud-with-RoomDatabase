@@ -5,16 +5,16 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.br.baseproject.database.dao.WordDao
-import com.br.baseproject.database.model.Word
+import com.br.baseproject.database.dao.RegistryDao
+import com.br.baseproject.database.model.Registry
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = [Word::class], version = 1, exportSchema = false)
+@Database(entities = [Registry::class], version = 1, exportSchema = false)
 
 abstract class AppRoomDatabase : RoomDatabase() {
 
-    abstract fun wordDao(): WordDao
+    abstract fun registryDao(): RegistryDao
 
     companion object {
 
@@ -26,7 +26,7 @@ abstract class AppRoomDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppRoomDatabase::class.java,
-                    "word_database")
+                    "user_database")
                     .addCallback(WordDatabaseCallback(scope))
                     .build()
                 INSTANCE = instance
@@ -36,19 +36,18 @@ abstract class AppRoomDatabase : RoomDatabase() {
     }
 
     private class WordDatabaseCallback(
-        private val scope: CoroutineScope)
-        : RoomDatabase.Callback() {
+        private val scope: CoroutineScope) : Callback() {
 
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)
             INSTANCE?.let { database ->
                 scope.launch {
-                    populateDatabase(database.wordDao())
+                    populateDatabase(database.registryDao())
                 }
             }
         }
 
-        suspend fun populateDatabase(wordDao: WordDao) {
+        suspend fun populateDatabase(registryDao: RegistryDao) {
             //wordDao.deleteAllWords()
 //            var word = Word("Gian")
 //            wordDao.insert(word)

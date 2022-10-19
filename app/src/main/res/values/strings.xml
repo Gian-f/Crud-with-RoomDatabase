@@ -35,5 +35,8 @@
     <string name="email_in_use_register">Este e-mail já está em uso.</string>
     <string name="strong_password_register">Insira uma senha mais forte.</string>
     <string name="text_btn_recover_account">Recuperar Acesso</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_home">Conversas</string>
+    <string name="title_dashboard">Meu Perfil</string>
 
 </resources>

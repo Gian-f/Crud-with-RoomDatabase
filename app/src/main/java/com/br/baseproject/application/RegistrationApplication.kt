@@ -6,11 +6,11 @@ import com.br.baseproject.repository.WordRepository
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.SupervisorJob
 
-class WordApplication : Application() {
+class RegistrationApplication : Application() {
 
     private val applicationScope = CoroutineScope(SupervisorJob())
 
     val database by lazy { AppRoomDatabase.getDatabase(applicationScope,this) }
-    val repository by lazy { WordRepository(database.wordDao()) }
+    val repository by lazy { WordRepository(database.registryDao()) }
 
 }

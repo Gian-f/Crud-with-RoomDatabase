@@ -5,19 +5,23 @@ import com.br.baseproject.database.model.Registry
 import com.br.baseproject.repository.WordRepository
 import kotlinx.coroutines.launch
 
-class WordViewModel(private val repository: WordRepository): ViewModel() {
+class RegistryViewModel(private val repository: WordRepository): ViewModel() {
 
     val allWords: LiveData<List<Registry>> = repository.allWords.asLiveData()
 
-    fun insert(registry: Registry)=viewModelScope.launch {
+    fun insert(registry: Registry) = viewModelScope.launch {
         repository.insert(registry)
+    }
+
+    fun findAll() = viewModelScope.launch {
+        repository.findAll()
     }
 
     class WordViewModelFactory(private val repository: WordRepository) : ViewModelProvider.Factory {
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
-            if (modelClass.isAssignableFrom(WordViewModel::class.java)) {
+            if (modelClass.isAssignableFrom(RegistryViewModel::class.java)) {
                 @Suppress("UNCHECKED_CAST")
-                return WordViewModel(repository) as T
+                return RegistryViewModel(repository) as T
             }
             throw IllegalArgumentException("ViewModel desconhecida")
         }

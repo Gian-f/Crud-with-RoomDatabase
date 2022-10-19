@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.NewWordActivity">
+    tools:context=".ui.view.NewRegistrationActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -51,7 +51,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/tv"
+                android:id="@+id/tvNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="4dp"
@@ -59,12 +59,12 @@
                 android:layout_marginBottom="16dp"
                 android:text="Nome"
                 android:textColor="@color/black"
-                app:layout_constraintBottom_toTopOf="@+id/edtWord"
+                app:layout_constraintBottom_toTopOf="@+id/edtNome"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/edtWord"
+                android:id="@+id/edtNome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
@@ -76,6 +76,31 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTelefone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="Telefone"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtNome" />
+
+            <EditText
+                android:id="@+id/edtTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/bg_edit_text"
+                android:hint="Insira um telefone..."
+                android:inputType="phone"
+                android:padding="14dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTelefone" />
 
             <Button
                 android:id="@+id/btnSave"
@@ -89,7 +114,7 @@
                 app:backgroundTint="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edtWord" />
+                app:layout_constraintTop_toBottomOf="@+id/edtTelefone" />
 
             <ProgressBar
                 android:id="@+id/progressBar"

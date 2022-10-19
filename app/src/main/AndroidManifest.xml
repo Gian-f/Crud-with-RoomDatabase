@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.br.baseproject" >
+    package="com.br.baseproject">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.br.baseproject.application.WordApplication"
+        android:name="com.br.baseproject.application.RegistrationApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,38 +15,43 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.RoomDatabaseMVVM"
-        tools:targetApi="32" >
+        tools:targetApi="32">
         <activity
-            android:name="com.br.baseproject.ui.view.SplashActivity"
+            android:name=".ui.view.ChatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_chat" />
+        <activity
+            android:name=".ui.view.SplashActivity"
             android:exported="true"
-            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity">
+            android:parentActivityName=".ui.view.auth.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name="com.br.baseproject.ui.view.auth.LoginActivity"
+            android:name=".ui.view.auth.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.br.baseproject.ui.view.DashboardActivity"
+            android:name=".ui.view.DashboardActivity"
             android:exported="false" />
         <activity
-            android:name="com.br.baseproject.ui.view.auth.RegisterActivity"
+            android:name=".ui.view.auth.RegisterActivity"
             android:exported="false"
-            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity" />
+            android:parentActivityName=".ui.view.auth.LoginActivity" />
         <activity
-            android:name="com.br.baseproject.ui.view.auth.RecoverAccountActivity"
+            android:name=".ui.view.auth.RecoverAccountActivity"
             android:exported="false"
-            android:parentActivityName="com.br.baseproject.ui.view.auth.LoginActivity" />
+            android:parentActivityName=".ui.view.auth.LoginActivity" />
         <activity
-            android:name="com.br.baseproject.ui.view.NewWordActivity"
+            android:name=".ui.view.NewRegistrationActivity"
             android:exported="false"
-            android:parentActivityName="com.br.baseproject.ui.view.MainActivity" />
+            android:parentActivityName=".ui.view.RegistrationActivity" />
         <activity
-            android:name="com.br.baseproject.ui.view.MainActivity"
+            android:name=".ui.view.RegistrationActivity"
             android:exported="false"
-            android:parentActivityName="com.br.baseproject.ui.view.DashboardActivity" />
+            android:parentActivityName=".ui.view.DashboardActivity" />
     </application>
 
 </manifest>

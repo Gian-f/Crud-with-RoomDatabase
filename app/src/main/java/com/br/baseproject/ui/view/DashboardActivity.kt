@@ -26,14 +26,13 @@ class DashboardActivity : AppCompatActivity() {
         navigatePerfil()
         navigateSettings()
         iniciaDados()
-        navigateInfo()
+        navigateChat()
         changeStatusBar()
         deslogar()
     }
 
     private fun iniciaDados() {
         val username = auth.currentUser?.email
-        println(username)
         if(username != null) {
             setUserName(username)
         }
@@ -45,13 +44,13 @@ class DashboardActivity : AppCompatActivity() {
 
     private fun navigateHome() {
         binding.home.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this,RegistrationActivity::class.java))
         }
     }
 
     private fun navigateForm() {
         binding.cadastros.setOnClickListener {
-            startActivity(Intent(this, NewWordActivity::class.java))
+            startActivity(Intent(this, NewRegistrationActivity::class.java))
         }
     }
 
@@ -74,9 +73,10 @@ class DashboardActivity : AppCompatActivity() {
             showBottomSheet(message = R.string.error_not_impl_yet)
         }
     }
-    private fun navigateInfo() {
-        binding.info.setOnClickListener {
+    private fun navigateChat() {
+        binding.chats.setOnClickListener {
             showBottomSheet(message = R.string.error_not_impl_yet)
+            //startActivity(Intent(this, ChatActivity::class.java))
         }
     }
 
